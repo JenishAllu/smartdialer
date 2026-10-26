@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SmartDialer — Complete Hiring Assignment Prototype
 
 A runnable SmartDialer prototype using the supplied synthetic collections dataset. Includes progressive and predictive dialing, a separate safety cap, two mock providers, event deduplication, dataset import, simulation, metrics, and tests.
@@ -41,12 +42,9 @@ pytest -q
 ```
 
 ## Structure
-- `app/main.py`: REST endpoints and validation.
-- `app/services/engine.py`: state, dialing, safety cap, event handling, persistence and simulation.
-- `app/services/dataset.py`: dataset summary and borrower import.
-- `app/services/providers.py`: mock provider A (reliable) and B (flaky).
-- `app/tests/`: capacity, idempotency and late-event tests.
-- `docs/`: architecture and state-machine documentation.
 
 ## Design decisions and limitations
 This is a simple modular monolith. A local JSON file makes the prototype easy to run without external services. An in-process lock protects concurrent requests within one process. For real multi-worker deployment, replace JSON persistence with PostgreSQL transactions, row-level locks and durable event storage. Predictive pacing is an explainable heuristic, not an ML model. Provider timeouts are treated as uncertain outcomes and retain reservations for reconciliation rather than blindly retrying. The mock providers do not place real calls. Production dialing would need consent, contact-time restrictions, suppression lists, audit logging and compliance review.
+=======
+# smartdialer
+>>>>>>> origin/main
